@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
+
+:root {
+    --main: rgb(242, 242, 239);
+    --secondary: rgb(233, 233, 233);
+    --Xcolor: rgb(140, 54, 54);
+    --Ocolor: rgb(64, 46, 119);
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    background-color:var(--main);
+    color:black;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gameboard {
+    display:grid;
+    grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr;
+    width: min(90vw, 90vh);
+    height: min(90vw, 90vh);
+    gap: 1vw;
+}
+
+.gameboard>div {
+    background-color: var(--main);
+    border-radius: 6vw;
+    box-shadow: inset .5vw .5vw 3vw .5vw rgba(0, 0, 0, 0.551);
+    font-size:calc(min(90vw, 90vh)/3.3);
+    color: var(--main);
+    text-shadow: .5vw .5vw 3vw black;
+    overflow: hidden;
+    text-align:center;
+}
+
+.gameboard>div:hover {
+    background-color:rgb(107, 185, 253);
+}
+
+.choose-player {
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    width:100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.655);
+    align-items: center;
+    justify-content: center;
+}
+
+.playSelect, .reset {
+    text-decoration:none;
+    font-family: "Rubik", sans-serif;
+    font-size:calc(min(90vw, 90vh)/3.3);
+    color:white;
+    background-color:gray;
+    border: 3px black solid;
+    padding: 1vh;
+    border-radius: 10px;
+    margin:10px;
+}
+
+.reset {
+    font-size: 10vh;
+}
+
+.win-game {
+    display: none;
+    flex-direction: column;
+    position:absolute;
+    width:100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.655);
+    align-items: center;
+    justify-content: center;
+}
+
+.winner, .ch-player {
+    color:white;
+    font-size: 10vh;
+}
